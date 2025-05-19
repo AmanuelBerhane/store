@@ -10,9 +10,15 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[8.0].define(version: 2025_05_19_085601) do
+ActiveRecord::Schema[8.0].define(version: 2025_05_19_125929) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "pg_catalog.plpgsql"
+
+  create_table "categories", force: :cascade do |t|
+    t.string "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "customers", force: :cascade do |t|
     t.string "name"
@@ -36,8 +42,13 @@ ActiveRecord::Schema[8.0].define(version: 2025_05_19_085601) do
     t.integer "price"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.bigint "category_id", null: false
+    t.integer "gender"
+    t.text "description"
+    t.index ["category_id"], name: "index_products_on_category_id"
   end
 
   add_foreign_key "orders", "customers"
   add_foreign_key "orders", "products"
+  add_foreign_key "products", "categories"
 end

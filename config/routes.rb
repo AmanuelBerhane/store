@@ -1,32 +1,16 @@
 Rails.application.routes.draw do
-  get "categories/show"
-  get "categories/index"
-  get "categories/edit"
-  get "categories/new"
-  get "categories/create"
-  get "categories/update"
-  get "categories/destroy"
-  get "customers/show"
-  get "customers/index"
-  get "customers/edit"
-  get "customers/new"
-  get "customers/create"
-  get "customers/update"
-  get "customers/destroy"
-  get "orders/show"
-  get "orders/index"
-  get "orders/edit"
-  get "orders/new"
-  get "orders/create"
-  get "orders/update"
-  get "orders/destroy"
-  get "products/show"
-  get "products/index"
-  get "products/edit"
-  get "products/new"
-  get "products/create"
-  get "products/update"
-  get "products/destroy"
+  get "users/index"
+  get "users/create"
+  get "users/show"
+  get "users/destroy"
+  get "users/update"
+  get "users/edit"
+  get "users/new"
+  resources :orders
+  resources :products
+  resources :customers
+  resources :categories
+  resources :users
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
   # Reveal health status on /up that returns 200 if the app boots with no exceptions, otherwise 500.

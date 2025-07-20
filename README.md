@@ -9,29 +9,20 @@ This repository contains the Ruby on Rails backend for an online store web appli
 ### Core Functionality
 - **RESTful JSON API** for frontend/API consumers
 - **Admin dashboard** backend services
-- **Background jobs** for order processing and notifications
+- **Background jobs** for order processing 
 
 ### Commerce Features
 - Product catalog management
-- Inventory tracking
-- Order processing pipeline
-- Discount/promotion system
-- Tax calculation
-
+- Order proccessing
+- 
 ### User System
-- JWT-based authentication
 - Role-based authorization (Customer, Admin, Staff)
-- Password reset flow
 - Account management
 
 ## Technology Stack
 
-- **Framework**: Ruby on Rails 7.x
+- **Framework**: Ruby on Rails 
 - **Database**: PostgreSQL
-- **Cache**: Redis
-- **Search**: Elasticsearch (optional)
-- **Background Jobs**: Sidekiq
-- **API Documentation**: RSwag
 - **Testing**: RSpec, FactoryBot
 
 ## Frontend Note

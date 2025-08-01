@@ -1,4 +1,5 @@
 class CategoriesController < ApplicationController
+  before_action :authorized, except: [:index, :show]
   def show
     @category = Category.find(params[:id])
   end

@@ -1,4 +1,5 @@
 class ProductsController < ApplicationController
+  before_action :authorized, except: [:index, :show]
   def show
     @product = Product.find(params[:id])
   end
@@ -16,17 +17,21 @@ class ProductsController < ApplicationController
   end
 
   def create
-    @product = Producr.new()
+    @product = Product.new(product_params)
     if @product.save
       redirect_to @product
     else
       render 'new'
+    end
   end
 
   def update
     @product = Product.find(params[:id])
-    @product.update(product_params)
-  end
+    if @product.update(product_params)
+      redirect_to @product
+    else
+      render 'edit'
+    end
   end
 
   def destroy

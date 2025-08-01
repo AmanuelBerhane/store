@@ -11,7 +11,8 @@ class Product < ApplicationRecord
   validates :category, presence: true
   validates :gender, presence: true
   validates :description ,presence: true, length: { maximum: 250 }
-  validates :image, presence: true
+  validates :images, presence: true
+
 
 
 end

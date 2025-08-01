@@ -45,7 +45,6 @@ group :development, :test do
   # Omakase Ruby styling [https://github.com/rails/rubocop-rails-omakase/]
   gem "rubocop-rails-omakase", require: false
 
-  group :development, :test do
-    gem "rspec-rails"
-  end
+  gem "rspec-rails"
+  gem 'active_storage_validations', '~> 1.1.1'
 end

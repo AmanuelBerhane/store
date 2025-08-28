@@ -46,5 +46,5 @@ group :development, :test do
   gem "rubocop-rails-omakase", require: false
 
   gem "rspec-rails"
-  gem 'active_storage_validations', '~> 1.1.1'
+  gem 'active_storage_validations', '~> 3.0.1'
 end
